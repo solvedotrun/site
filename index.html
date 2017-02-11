@@ -10,6 +10,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <script src="js/clipboard.min.js"></script>
+
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,29 +20,38 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
 <!-- Problem 1: -->
-
-<div class="problem">
-
-<h2 class="text-center">Problem 1:</h2>
-
-<p class="text-center">Next problem goes here!</p>
-
+<div class="text-center">
+    <div class="problem">
+        <h2>Problem 1:</h2>
+        <p id="p1">Write a program that starts at the number 1 then prints to screen, sequentially through numbers 1 to 10.</p>
+        <button class="button" id="copy-button" data-clipboard-target="#p1"><span class="glyphicon glyphicon-copy"></span></button>
+    </div>
 </div>
 
 <!-- Problem 0: -->
 
-<div class="problem">
-
-
-<h2 class="text-center">Problem 0:</h2>
-
-<p class="text-center">Write a program that displays the following text as a string: Hello, World!</p>
-
+<div class="text-center">
+    <div class="problem">
+        <h2>Problem 0:</h2>
+        <p id="p0">Write a program that displays the following text as a string: Hello, World!</p>
+        <button class="button" id="copy-button" data-clipboard-target="#p0"><span class="glyphicon glyphicon-copy"></span></button>
+    </div>
 </div>
+
+<!-- Clipboard initiation script: -->
+
+<script>
+    (function(){
+    new Clipboard('#copy-button');
+})();
+</script>
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
