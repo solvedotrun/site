@@ -51,3 +51,7 @@ h2 {
 .glyphicon {
 color: white;
 }
+
+.button:focus {
+    outline: none;
+}
